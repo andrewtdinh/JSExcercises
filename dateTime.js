@@ -13,13 +13,16 @@ function getDateSuffix(d){
       break;
     case 3:
       dateSuffix = 'rd';
+      break;
+    default:
+      dateSuffix = 'th';
   }
   return dateSuffix;
 }
 console.log('Today is: ' +dayList[today.getDay()]+ ', the ' +date+ getDateSuffix(date));
-dates = [1, 2, 3, 21, 22, 23, 31]
+dates = [1, 2, 3, 21, 22, 23, 31, 12, 13]
 dates.forEach(function(localDate) {
-  console.log('Today is: ' +dayList[today.getDay()]+ ', the ' +localDate+ getDateSuffix(localDate));  
+  console.log('Checking date suffixes:  ' +localDate+ getDateSuffix(localDate));  
 });
 
 
